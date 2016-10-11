@@ -1,10 +1,8 @@
-<!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view wx:for="{{shots}}" class="image-box" wx:for-item="item">
+    <image bindtap="bindViewTap" data-id="{{item.id}}" wx:if="{{item.images.normal}}" src="{{item.images.normal}}" mode="aspectFill" style="width:100%"></image>
+    <image bindtap="bindViewTap" data-id="{{item.id}} "wx:else src="{{item.images.teaser}}" mode="aspectFill"></image>
   </view>
 </view>
+
+

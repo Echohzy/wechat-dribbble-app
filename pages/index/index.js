@@ -1,26 +1,29 @@
 //index.js
 //获取应用实例
+var fetchData = require("../../utils/fetch.js").fetchData;
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+    shots: []
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function(event) {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../detail/detail?shot_id=' + event.target.dataset.id
     })
   },
   onLoad: function () {
-    console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
+    fetchData({
+      url: "/shots?per_page=10&page=1",
+      success: function(res){
+        console.log(res.data);
+        that.setData({shots: res.data});
+      },
+      error: function(res){
+        console.log(res.data);
+      }
+    });
   }
-})
+});
