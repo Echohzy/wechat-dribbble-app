@@ -4,6 +4,7 @@ var fetchData = require("../../utils/fetch.js").fetchData;
 var app = getApp()
 Page({
   data: {
+    type: "all",
     shots: []
   },
   //事件处理函数
@@ -12,18 +13,21 @@ Page({
       url: '../detail/detail?shot_id=' + event.target.dataset.id
     })
   },
-  onLoad: function () {
-    var that = this
-    //调用应用实例的方法获取全局数据
+  fetchShotData: function(type){
+    var that = this;
     fetchData({
-      url: "/shots?per_page=10&page=1",
+      url: "/shots?per_page=15&page=1&list="+type,
       success: function(res){
-        console.log(res.data);
-        that.setData({shots: res.data});
-      },
-      error: function(res){
-        console.log(res.data);
+        that.setData({shots: res.data, type: type||"all"});
       }
     });
+  },
+  onLoad: function () {
+    //调用应用实例的方法获取全局数据
+    this.fetchShotData();
+    
+  },
+  onReady: function(){
+    wx.setNavigationBarTitle({title:this.data.type});
   }
 });
