@@ -2,7 +2,7 @@
     <view class="background-card">
         <image src="{{shot.images.normal}}" mode="aspectFill" style="width:100%"/>
     </view>
-    <view class="user-info-block">
+    <view class="user-info-block" bindtap="bindViewTap">
         <view class="avatar">
             <image src="{{shot.user.avatar_url}}" mode="aspectFill" style="width:80px;height:80px"/>
         </view>

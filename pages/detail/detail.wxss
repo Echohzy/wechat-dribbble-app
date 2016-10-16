@@ -32,17 +32,21 @@
 .info image{
     height: 16px;
     width:16px;
+    margin-right: 4px;
 }
 .description{
     padding: 6px;
 }
+.comments{
+    width: 100%;
+}
 .comments .title{
     font-size: 20px;
-    margin: 16px 0 0 10px;
+    margin: 16px 10px;
 }
 .comment-item{
     padding:6px 10px 10px;
-   border-bottom: 1px solid #000; 
+   border-bottom: 1px solid #e2e6e6; 
 }
 .comment-user{
     display: flex;

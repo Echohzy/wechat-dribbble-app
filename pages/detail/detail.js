@@ -10,9 +10,9 @@ Page({
             url : "/shots/"+ options.shot_id,
             success: function(res){
                 that.setData({shot:res.data});
+
             }
         });
-
         fetchData({
            url: "/shots/" + options.shot_id + "/comments",
            success: function(res){
@@ -20,9 +20,9 @@ Page({
            } 
         });
     },
-    onReady: function(){
-        wx.setNavigationBarTitle({
-            title: this.data.shot.title
-        });
+    bindViewTap: function(){
+       wx.navigateTo({
+           url: "../user/user?user_id=" + this.data.shot.user.id
+       }); 
     }
 });

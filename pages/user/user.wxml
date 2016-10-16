@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="user-info" style="background-image:url({{user.avatar_url}})">
+        <view class="avatar-box" >
+            <image src="{{user.avatar_url}}" mode="aspectFill"/>
+        </view>
+        <view class="name-box">
+            <text>{{user.name}}</text>
+        </view>
+        <view class="address-box">
+            <text>{{user.location}}</text>
+        </view>
+    </view>
+    <view class="user-shots">
+        <view wx:for="{{shots}}" class="shot-item">
+            <image src="{{item.images.normal}}" />
+        </view>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+.user-info{
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    background-size:cover;
+    padding: 30px 0;
+    height: 190px;
+    position: fixed;
+    top:0;
+}
+.user-info view{
+    text-align: center;
+}
+.avatar-box image{
+    height: 100px;
+    width: 100px;
+    border:2px solid #fff;
+    border-radius: 50px;
+
+}
+.name-box{
+    padding: 12px;
+    font-size:24px;
+}
+.user-shots{
+    width: 100%;
+    margin-top:250px;
+
+}
+
+.shot-item image{
+    width: 100%;
+    display: block;
+}
+
