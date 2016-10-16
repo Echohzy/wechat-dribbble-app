@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="background-card">
+        <image src="{{shot.images.normal}}" mode="aspectFill" style="width:100%"/>
+    </view>
+    <view class="user-info-block">
+        <view class="avatar">
+            <image src="{{shot.user.avatar_url}}" mode="aspectFill" style="width:80px;height:80px"/>
+        </view>
+        <view class="name">
+            <text>{{shot.user.username}}</text>
+        </view>
+        <view class="info">
+            <view class="heart">
+                <image src="../../images/heart.png" />
+                <text>{{shot.likes_count}}</text>
+            </view>
+            <view class="comment">
+                <image src="../../images/comment.png" />
+                <text>{{shot.comments_count}}</text>
+            </view>
+            <view class="view">
+                <image src="../../images/view.png" />
+                <text>{{shot.views_count}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="comments">
+        <view class="title">
+            <text>Comments</text>
+        </view>
+        <view class="comment-container">
+            <view class="comment-item" wx:for="{{comments}}">
+                <view class="comment-user">
+                    <image src="{{item.user.avatar_url}}" />
+                    <text>{{item.user.username}}</text>
+                </view>
+                <view class="comment-body">
+                    <text>{{item.body}}</text>
+                </view>
+                <view class="comment-detail">
+                    <image src="../../images/heart.png" />
+                    <text>{{item.likes_count}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

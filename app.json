@@ -5,9 +5,9 @@
     "pages/detail/detail"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "backgroundTextStyle":"bold",
+    "navigationBarBackgroundColor": "#F64A8D",
+    "navigationBarTitleText": "Dribbble",
+    "navigationBarTextStyle":"white"
   }
 }

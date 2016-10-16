@@ -1,6 +1,7 @@
 /**index.wxss**/
 .image-container{
   flex: 1;
+  height:100%;
   width:100%;
 }
 .image-box{
@@ -8,4 +9,9 @@
 }
 .image-box image{
   display: block;
+}
+.footer{
+  height: 80rpx;
+  width: 100%;
+  background-color: "red";
 }
