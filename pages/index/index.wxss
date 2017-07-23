@@ -10,6 +10,14 @@
 .image-box image{
   display: block;
 }
+.loading-block{
+  width: 100%;
+  padding: 10px 0;
+  text-align:center;
+}
+.loading-block image{
+  height: 20px;
+}
 .footer{
   height: 80rpx;
   width: 100%;

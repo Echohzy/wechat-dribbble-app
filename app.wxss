@@ -6,4 +6,5 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  font-family: Monaco, Helvetica, sans-serif;
 } 
