@@ -11,7 +11,7 @@ Page({
   //事件处理函数
   bindViewTap: function(event) {
     wx.navigateTo({
-      url: '../detail/detail?shot_id=' + event.target.dataset.id
+      url: '../detail/detail?shot_id=' + event.currentTarget.dataset.id
     })
   },
   fetchShotData: function(){

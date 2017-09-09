@@ -10,15 +10,15 @@
             <text>{{shot.user.username}}</text>
         </view>
         <view class="info">
-            <view class="heart">
+            <view class="heart block" >
                 <image src="../../images/heart.png" />
                 <text>{{shot.likes_count}}</text>
             </view>
-            <view class="comment">
+            <view class="comment block">
                 <image src="../../images/comment.png" />
                 <text>{{shot.comments_count}}</text>
             </view>
-            <view class="view">
+            <view class="view block">
                 <image src="../../images/view.png" />
                 <text>{{shot.views_count}}</text>
             </view>
@@ -29,7 +29,7 @@
             <text>Comments</text>
         </view>
         <view class="comment-container">
-            <view class="comment-item" wx:for="{{comments}}">
+            <view class="comment-item" wx:for="{{comments}}" wx:key="id">
                 <view class="comment-user">
                     <image src="{{item.user.avatar_url}}" />
                     <text>{{item.user.username}}</text>

@@ -28,9 +28,25 @@
     margin-top:250px;
 
 }
-
+.shot-item{
+  background: #f4f4f4;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
 .shot-item image{
     width: 100%;
     display: block;
+}
+.shot-item .image-info{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+.shot-item .image-info image{
+  height: 15px;
+  width: 15px;
+  margin: 0 4px 0 10px; 
 }
 

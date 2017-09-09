@@ -5,11 +5,51 @@
   width:100%;
 }
 .image-box{
+  background: #fff;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.image-box .image-wrapper image{
+  display: block;
   width: 100%;
 }
-.image-box image{
-  display: block;
+
+.image-box .image-info{
+  font-size: 12px;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
 }
+
+.image-info .avatar{
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.image-info .avatar image{
+  height: 30px;
+  width: 30px;
+}
+
+.image-info .detail{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-info .detail image{
+  width: 15px;
+  height: 15px;
+  margin: 0 4px 0 10px;
+}
+
+
 .loading-block{
   width: 100%;
   padding: 10px 0;

@@ -1,4 +1,10 @@
 /**app.wxss**/
+
+page{
+  background: #f4f4f4;
+  padding: 0;
+  margin: 0;
+}
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +13,6 @@
   justify-content: space-between;
   box-sizing: border-box;
   font-family: Monaco, Helvetica, sans-serif;
-} 
+  font-size: 12px;
+
+}

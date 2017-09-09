@@ -11,8 +11,20 @@
         </view>
     </view>
     <view class="user-shots">
-        <view wx:for="{{shots}}" class="shot-item">
-            <image src="{{item.images.normal}}" />
+        <view wx:for="{{shots}}" wx:key="id" class="shot-item">
+          <view class="card">
+            <view class="image-wrapper">
+              <image src="{{item.images.normal}}" />
+            </view>
+            <view class="image-info">
+              <image src="../../images/comment.png"></image>
+              <text>{{item.comments_count}}</text>
+              <image src="../../images/heart.png"></image>
+              <text>{{item.likes_count}}</text>
+              <image src="../../images/view.png"></image>
+              <text>{{item.views_count}}</text>
+            </view>
+          </view>
         </view>
     </view>
 </view>

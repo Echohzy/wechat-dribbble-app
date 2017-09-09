@@ -2,9 +2,27 @@
   <scroll-view scroll-y="true" class="image-container">
     <text></text>
     <view class="image-container">
-      <view wx:for="{{shots}}" class="image-box" wx:for-item="item">
-        <image bindtap="bindViewTap" data-id="{{item.id}}" wx:if="{{item.images.normal}}" src="{{item.images.normal}}" mode="aspectFill" style="width:100%"></image>
-        <image bindtap="bindViewTap" data-id="{{item.id}} "wx:else src="{{item.images.teaser}}" mode="aspectFill" style="width:100%"></image>
+      <view wx:for="{{shots}}" wx:key="id" class="image-box" wx:for-item="item">
+        <view class="card" bindtap="bindViewTap" data-id="{{item.id}}">
+          <view class="image-wrapper">
+            <image  wx:if="{{item.images.normal}}" src="{{item.images.normal}}" mode="aspectFill" style="width:100%"></image>
+            <image  wx:else src="{{item.images.teaser}}" mode="aspectFill" style="width:100%"></image>
+          </view>
+          <view class="image-info">
+            <view class="avatar">
+              <image src="{{item.user.avatar_url}}"></image>
+            </view>
+            <text className="name">{{item.user.name}}</text>
+            <view class="detail">
+              <image src="../../images/comment.png"></image>
+              <text>{{item.comments_count}}</text>
+              <image src="../../images/heart.png"></image>
+              <text>{{item.likes_count}}</text>
+              <image src="../../images/view.png"></image>
+              <text>{{item.views_count}}</text>
+            </view>
+          </view>
+        </view>
       </view>
       <view wx:if="{{requesting}}" class="loading-block">
         <image src="../../images/loading.gif" mode="aspectFit" />

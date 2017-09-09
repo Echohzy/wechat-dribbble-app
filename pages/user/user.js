@@ -2,7 +2,8 @@ var fetchData = require("../../utils/fetch.js").fetchData;
 Page({
     data: {
         user: {},
-        shots:[]
+        shots:[],
+        requesting: false
     },
     onLoad: function(options){
         var that = this;
