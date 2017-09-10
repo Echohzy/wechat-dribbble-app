@@ -12,7 +12,7 @@
             <view class="avatar">
               <image src="{{item.user.avatar_url}}"></image>
             </view>
-            <text className="name">{{item.user.name}}</text>
+            <text class="name">{{item.user.name}}</text>
             <view class="detail">
               <image src="../../images/comment.png"></image>
               <text>{{item.comments_count}}</text>

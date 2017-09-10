@@ -36,6 +36,13 @@
   width: 30px;
 }
 
+.image-info .name{
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .image-info .detail{
   flex: 1;
   align-items: center;
@@ -48,7 +55,6 @@
   height: 15px;
   margin: 0 4px 0 10px;
 }
-
 
 .loading-block{
   width: 100%;
