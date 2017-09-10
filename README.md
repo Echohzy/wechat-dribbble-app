@@ -4,17 +4,9 @@
 
 ## Preview
 
-* index
 
-![](images/index.png)
+![](images/preview.gif)
 
-* detail
-
-![](images/shot.png)
-
-* user
-
-![](images/user.png)
 
 ## Usage
 
