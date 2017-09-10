@@ -83,3 +83,12 @@
 .comment-container{
   margin-bottom: 0;
 }
+
+.loading-block{
+  width: 100%;
+  padding: 10px 0;
+  text-align:center;
+}
+.loading-block image{
+  height: 20px;
+}

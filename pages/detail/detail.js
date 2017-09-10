@@ -5,7 +5,8 @@ Page({
         comments: [],
         requesting: false,
         page: 1,
-        per_page: 10
+        per_page: 10,
+        finished: false
     },
     staticData: {
       per_page: 10
@@ -23,6 +24,9 @@ Page({
         
     },
     fetchComments: function(options){
+      if(this.data.requesting||this.data.finished){
+        return;
+      }
       var that = this;
       this.setData({ requesting: true });
       fetchData({
@@ -35,7 +39,8 @@ Page({
             that.setData({
               comments: that.data.comments.concat(comments),
               page: comments.length === that.data.per_page ? that.data.page + 1 : that.data.page,
-              requesting: false
+              requesting: false,
+              finished: comments.length === that.data.per_page?false:true
             });
           }
         },

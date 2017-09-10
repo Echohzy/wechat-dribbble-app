@@ -26,5 +26,8 @@
             </view>
           </view>
         </view>
+        <view wx:if="{{requesting}}" class="loading-block">
+          <image src="../../images/loading.gif" mode="aspectFit" />
+        </view>
     </view>
 </view>
