@@ -11,7 +11,7 @@ function fetchData(params){
         data:params.data,
         method: params.method || "GET",
         success: params.success,
-        error: params.error
+        fail: params.error
     });
 }
 
